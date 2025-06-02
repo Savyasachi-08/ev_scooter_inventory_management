@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Vehicle</title>
+</head>
+
+<body>
+    <h2>View Vehicle Details</h2>
+
+    <form method="POST" action="/view-vehicle">
+        <label>Enter Vehicle ID:</label><br>
+        <input type="text" name="vehicle_id" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if vehicle %}
+    <h3>Vehicle Information:</h3>
+    <ul>
+        <li><strong>Model Name:</strong> {{ vehicle['model_name'] }}</li>
+        <li><strong>Manufacture Date:</strong> {{ vehicle['manufacture_date'] }}</li>
+        <li><strong>Battery Capacity:</strong> {{ vehicle['battery_capacity'] }}</li>
+        <li><strong>Motor Power:</strong> {{ vehicle['motor_power'] }}</li>
+        <li><strong>Color:</strong> {{ vehicle['color'] }}</li>
+        <li><strong>Notes:</strong> {{ vehicle['notes'] }}</li>
+    </ul>
+    {% elif searched %}
+    <p><strong>No vehicle found with that ID.</strong></p>
+    {% endif %}
+
+    <br>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+
+</html>

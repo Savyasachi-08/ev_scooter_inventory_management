@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Vehicle</title>
+</head>
+
+<body>
+    <h2>Add New Vehicle</h2>
+    <form method="POST" action="/add-vehicle">
+        <label>Vehicle ID:</label><br>
+        <input type="text" name="vehicle_id" required><br><br>
+
+        <label>Model Name:</label><br>
+        <input type="text" name="model_name" required><br><br>
+
+        <label>Manufacturing Date (YYYY-MM-DD):</label><br>
+        <input type="text" name="manufacture_date" required><br><br>
+
+        <label>Battery Capacity:</label><br>
+        <input type="text" name="battery_capacity"><br><br>
+
+        <label>Motor Power:</label><br>
+        <input type="text" name="motor_power"><br><br>
+
+        <label>Color:</label><br>
+        <input type="text" name="color"><br><br>
+
+        <label>Notes:</label><br>
+        <textarea name="notes"></textarea><br><br>
+
+        <button type="submit">Add Vehicle</button>
+    </form>
+
+    <br>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+
+</html>
